@@ -1,0 +1,5 @@
+﻿  test.c
+A:\kursach2semak\test.c(46,41): warning C4267: функция: преобразование из "size_t" в "int"; возможна потеря данных
+A:\kursach2semak\test.c(53,27): warning C4267: функция: преобразование из "size_t" в "int"; возможна потеря данных
+A:\kursach2semak\test.c(58,51): error C2036: void *: неизвестный размер
+A:\kursach2semak\test.c(58,79): error C2036: void *: неизвестный размер

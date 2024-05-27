@@ -1,0 +1,23 @@
+﻿  base.c
+A:\kursach2semak\base.c(71,30): warning C4028: формальный параметр 2 отличается от объявления
+A:\kursach2semak\base.c(71,43): warning C4028: формальный параметр 3 отличается от объявления
+A:\kursach2semak\base.c(78,28): warning C4267: функция: преобразование из "size_t" в "int"; возможна потеря данных
+A:\kursach2semak\base.c(78,34): warning C4267: функция: преобразование из "size_t" в "int"; возможна потеря данных
+A:\kursach2semak\base.c(80,31): warning C4267: функция: преобразование из "size_t" в "int"; возможна потеря данных
+A:\kursach2semak\base.c(80,37): warning C4267: функция: преобразование из "size_t" в "int"; возможна потеря данных
+A:\kursach2semak\base.c(82,31): warning C4267: функция: преобразование из "size_t" в "int"; возможна потеря данных
+A:\kursach2semak\base.c(82,37): warning C4267: функция: преобразование из "size_t" в "int"; возможна потеря данных
+A:\kursach2semak\base.c(84,26): warning C4267: функция: преобразование из "size_t" в "int"; возможна потеря данных
+A:\kursach2semak\base.c(84,32): warning C4267: функция: преобразование из "size_t" в "int"; возможна потеря данных
+A:\kursach2semak\base.c(86,27): warning C4267: функция: преобразование из "size_t" в "int"; возможна потеря данных
+A:\kursach2semak\base.c(86,33): warning C4267: функция: преобразование из "size_t" в "int"; возможна потеря данных
+  main.c
+A:\kursach2semak\main.c(33,17): warning C4267: функция: преобразование из "size_t" в "int"; возможна потеря данных
+A:\kursach2semak\main.c(33,23): warning C4267: функция: преобразование из "size_t" в "int"; возможна потеря данных
+A:\kursach2semak\main.c(36,29): warning C4020: printArray: слишком много фактических параметров
+  sorts.c
+A:\kursach2semak\sorts.c(128,60): warning C4267: функция: преобразование из "size_t" в "int"; возможна потеря данных
+A:\kursach2semak\sorts.c(135,49): warning C4020: quick_sort: слишком много фактических параметров
+A:\kursach2semak\sorts.c(138,67): warning C4020: quick_sort: слишком много фактических параметров
+  Создание кода...
+  kursach.vcxproj -> A:\kursach2semak\x64\Debug\kursach.exe
