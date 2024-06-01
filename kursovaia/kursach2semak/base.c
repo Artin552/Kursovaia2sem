@@ -9,6 +9,7 @@ int sort_set_method() {
     if (1 <= method && method <= 8) {
         return 0;
     }
+    method = 1;
     printf("Wrong method\nDefault value has been set\n");
     return 1;
 }
@@ -18,6 +19,7 @@ int sort_set_direction() {
     if (1 <= direction && direction <= 2) {
         return 0;
     }
+    direction = 1;
     printf("Wrong direction\nDefault value has been set\n");
     return 1;
 }
@@ -28,11 +30,12 @@ void change_elemsize() {
         break;
     case DOUBLE:
         elemsize = sizeof(double);
+        break;
     case CHAR:
         elemsize = sizeof(char);
+        break;
     }
 }
-
 
 void printArray(void* array,  size_t size) {
     for (size_t i = 0; i < size; ++i) {
@@ -50,7 +53,6 @@ void printArray(void* array,  size_t size) {
     }
     printf("\n");
 }
-
 
 
 void swap(void* a, void* b, int size) {
@@ -93,24 +95,30 @@ int sort(void* array, size_t size, size_t elemsize, int (*comp)(void* a1, void* 
     switch (method) {
     case SORT_METHOD_EXCHANGE:
         bubble_sort(array, size, elemsize, comp);
+        break;
     case SORT_METHOD_INSERTION:
         insertion_sort(array, size, elemsize, comp);
+        break;
     case SORT_METHOD_SELECTION:
         selection_sort(array, size, elemsize, comp);
+        break;
     case SORT_METHOD_COMB:
         comb_sort(array, size, elemsize, comp);
+        break;
     case SORT_METHOD_SHELL:
         shell_sort(array, size, elemsize, comp);
+        break;
     case SORT_METHOD_QUICK:
         quick_sort(array, size, elemsize, comp);
+        break;
     case SORT_METHOD_MERGE:
         merge_sort(array, size, elemsize, comp);
+        break;
     case SORT_METHOD_HEAP:
         heap_Sort(array, size, elemsize, comp);
+        break;
     default:
         return -2; // Unknown sorting method
     }
-    
-
    
 }

@@ -26,15 +26,13 @@ void bubble_sort(void* array, int size, int elemsize, int (*comp)(void* a1, void
 }
 
 void insertion_sort(void* array, int size, int elemsize, int (*comp)(void* a1, void* a2)) {
-    char* arr = array;
+    char* arr = (char*)array;
     for (int i = 1; i < size; i++) {
-        char* key = malloc(elemsize);
+        char* key = (char*)malloc(elemsize);
         memcpy(key, arr + i * elemsize, elemsize);
         int j = i - 1;
-        while (j >= 0) {
-            void* a = arr + j * elemsize;
-            if (comp(a, key) > 0) break;
-            memcpy(arr + (j + 1) * elemsize, a, elemsize);
+        while (j >= 0 && comp(arr + j * elemsize, key) > 0) {
+            memcpy(arr + (j + 1) * elemsize, arr + j * elemsize, elemsize);
             j--;
         }
         memcpy(arr + (j + 1) * elemsize, key, elemsize);
@@ -52,16 +50,13 @@ void selection_sort(void* array, int size, int elemsize, int (*comp)(void* a1, v
         for (int j = i + 1; j < size; j++) {
             void* a = arr + j * elemsize;
             void* b = arr + selected * elemsize;
-            int cmp = (direction == SORT_DIRECTION_ASCENDING) ? comp(a, b) : comp(b, a);
-            if (cmp < 0) selected = j;
+            if (comp(a,b) < 0) selected = j;
         }
         if (selected != i) {
             swap(arr + i * elemsize, arr + selected * elemsize, elemsize);
         }
     }
-    if (direction == 2) {
-        reverse(array, size, elemsize);
-    }
+    if (direction == 2) reverse(array, size, elemsize);
 }
 
 void comb_sort(void* array, int size, int elemsize, int (*comp)(void* a1, void* a2)) {
@@ -203,6 +198,7 @@ void heap_Sort(void* array, int size, int elemsize, int(*comp)(void*, void*)) {
         swap(arr, arr + i * elemsize, elemsize);
         heapify(arr, i, 0, elemsize, comp);
     }
+    if (direction == 2) reverse(array, size, elemsize);
 }
 
 

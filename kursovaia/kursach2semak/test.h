@@ -2,7 +2,5 @@
 #ifndef TEST_H
 #define TEST_H
 
-void printArray(void* array, int len, int type);
-int test();
-
+void test();
 #endif //TEST_H
